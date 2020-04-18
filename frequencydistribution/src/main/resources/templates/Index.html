@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Distribucion de frecuencias</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link th:href="@{css/style.css}" rel="stylesheet" media="all">
+</head>
+	
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Distribucion de frecuencias</h2>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row m-b-55">
+                            <div class="name">Datos:</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                   <div class="input-group-desc">
+	                                   <textarea rows="5" class="area--style-5" cols="50"></textarea>
+	                                   <label class="label--desc">los datos deben estas separados por coma (1,2,3,4,...)</label>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-2">
+                        	 	<div class="form-row m-b-55">
+                            		<div class="name">Frecuencias:</div>
+                            	</div>
+                        	</div>
+                        	<div class="col-10">
+                        		<div class="form-inline">
+	                        		<div class="form-check ml-2">
+									  <input class="form-check-input" type="checkbox" id="defaultCheck1">
+									  <label class="form-check-label" for="defaultCheck1">
+									    Absoluta
+									  </label>
+									</div>
+									<div class="form-check ml-2">
+									  <input class="form-check-input" type="checkbox" id="defaultCheck2">
+									  <label class="form-check-label" for="defaultCheck2">
+									    Absoluta Acumulada
+									  </label>
+									</div>
+									<div class="form-check ml-2">
+									  <input class="form-check-input" type="checkbox" id="defaultCheck3">
+									  <label class="form-check-label" for="defaultCheck3">
+									    Relativa
+									  </label>
+									</div>
+									<div class="form-check ml-2">
+									  <input class="form-check-input" type="checkbox" id="defaultCheck4">
+									  <label class="form-check-label" for="defaultCheck4">
+									    Relativa Acumulada
+									  </label>
+									</div>
+                        		</div>
+                        	</div>
+                        </div>
+                        <div class="row">
+                        
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Calcular</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script th:src="@{js/main.js}"></script>
+</body>
+</html>
