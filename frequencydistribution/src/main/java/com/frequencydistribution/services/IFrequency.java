@@ -1,8 +1,12 @@
 package com.frequencydistribution.services;
 
+import java.util.List;
+
+import com.frequencydistribution.model.DistributionTable;
+
 public interface IFrequency {
-	float GetRange(float min, float max);
-	float GetIntervals(float logarithm);
-	float GetAmplitude(float range, float Intervals);
-	void FrequencyDistribution(float range, float interval, float amplitude);
+	int GetRange(String sample);
+	int GetIntervals(int logarithm);
+	double GetAmplitude(float range, float intervals);
+	List<DistributionTable> FrequencyDistribution(String[] sample, double interval, int range);
 }

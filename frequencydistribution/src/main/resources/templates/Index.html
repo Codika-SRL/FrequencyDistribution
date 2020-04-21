@@ -19,59 +19,53 @@
                     <h2 class="title">Distribucion de frecuencias</h2>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method="post">
                         <div class="form-row m-b-55">
                             <div class="name">Datos:</div>
                             <div class="value">
                                 <div class="row row-space">
                                    <div class="input-group-desc">
-	                                   <textarea rows="5" class="area--style-5" cols="50"></textarea>
+	                                   <textarea th:text="${data}" name="data" rows="5" class="area--style-5" cols="50"></textarea>
 	                                   <label class="label--desc">los datos deben estas separados por coma (1,2,3,4,...)</label>
                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                        	<div class="col-2">
-                        	 	<div class="form-row m-b-55">
-                            		<div class="name">Frecuencias:</div>
-                            	</div>
-                        	</div>
-                        	<div class="col-10">
-                        		<div class="form-inline">
-	                        		<div class="form-check ml-2">
-									  <input class="form-check-input" type="checkbox" id="defaultCheck1">
-									  <label class="form-check-label" for="defaultCheck1">
-									    Absoluta
-									  </label>
-									</div>
-									<div class="form-check ml-2">
-									  <input class="form-check-input" type="checkbox" id="defaultCheck2">
-									  <label class="form-check-label" for="defaultCheck2">
-									    Absoluta Acumulada
-									  </label>
-									</div>
-									<div class="form-check ml-2">
-									  <input class="form-check-input" type="checkbox" id="defaultCheck3">
-									  <label class="form-check-label" for="defaultCheck3">
-									    Relativa
-									  </label>
-									</div>
-									<div class="form-check ml-2">
-									  <input class="form-check-input" type="checkbox" id="defaultCheck4">
-									  <label class="form-check-label" for="defaultCheck4">
-									    Relativa Acumulada
-									  </label>
-									</div>
-                        		</div>
-                        	</div>
-                        </div>
-                        <div class="row">
-                        
-                        </div>
-                        <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Calcular</button>
-                        </div>
+	                    	<div class="col-2">
+	                        	<h5 th:text="'R: ' + ${range}"></h5></br>
+	                        	<h5 th:text="'K: ' + ${interval}"></h5></br>
+	                        	<h5 th:text="'A: ' + ${amplitude}"></h5>
+	                        </div>
+	                        <div class="col-10">
+	                        	<table class="table table-bordered">
+								 <thead>
+								 	<tr class="text-center">
+								 		<th>intervalo</td>
+								 		<th>X</td>
+								 		<th>F</td>
+								 		<th>Fr</td>
+								 		<th>F</td>
+								 	</tr>
+								 </thead>
+								 <tbody>
+								 	<tr class="text-center" th:each="item: ${result}">
+								 		<td th:text="${item.Intervals}"></td>
+								 		<td th:text="${item.Clases}"></td>
+								 		<td th:text="${item.FrequencyAbsolute}"></td>
+								 		<td th:text="${item.FrequencyRelative}"></td>
+								 		<td th:text="${item.FrequencyAbsoluteAccumulate}"></td>
+								 	</tr>
+								 </tbody>
+								</table>
+
+	                        </div>
+	                        <div class="col-12">
+	                            <div class="text-center">
+	                            	<button class="btn btn--radius-2 btn--red" type="submit">Calcular</button>
+	                            </div>
+	                        </div>
+                       	</div>
                     </form>
                 </div>
             </div>
